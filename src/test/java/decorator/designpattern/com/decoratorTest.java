@@ -11,9 +11,7 @@ public class decoratorTest {
 		Beverage beverage = new Espresso();
 		assertEquals("Esprssso$1.99", beverage.getDescription() + "$" + beverage.cost());
 		
-		Beverage beverage2 = new HouseBlend();
-		beverage2 = new Soy(beverage2);
-		beverage2 = new Mocha(beverage2);
+		Beverage beverage2 = new Mocha(new Soy(new HouseBlend()));
 		System.out.println(beverage2.getDescription() +  "$" + beverage2.cost());
 		assertEquals("HouseBleand Coffee, Soy, Mocha$1.54", beverage2.getDescription() +  "$" + beverage2.cost());
 	}
