@@ -1,7 +1,7 @@
 /********************************************************************
- * File Name:    Presentation.java
+ * File Name:    EnumSingleton.java
  *
- * Date Created: 2015年3月16日
+ * Date Created: 2015年3月17日
  *
  * ------------------------------------------------------------------
  * Copyright (C) 2010 Symantec Corporation. All Rights Reserved.
@@ -9,20 +9,18 @@
  *******************************************************************/
 
 // PACKAGE/IMPORTS --------------------------------------------------
-package facade.designpattern.com;
+package singleton.designpattern.com;
 
 /**
  * TODO: Update with a detailed description of the interface/class.
  *
  */
-public class Presentation
+public enum EnumSingleton
 {
-  public void generate()
+  uniqueInstance;
+  public void singleonOperation()
   {
-    ConfigModel configModel = ConfigManager.getInstance().getConfigModel();
-    if (configModel.isNeedGenPresentation())
-    {
-      System.out.println("Working on generating presentation files");
-    }
+    System.out.println("This is a singleon instance from Enum method");
   }
+
 }
